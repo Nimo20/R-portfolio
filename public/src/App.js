@@ -1,12 +1,29 @@
-import React from "react"
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Header from './Header';
+import AboutMe from './AboutMe';
+import Portfolio from './Portfolio';
+import Contact from './Contact';
+import Resume from './Resume';
+import Footer from './Footer';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-
-    </div>
+    <Router>
+      <div>
+        <Header />
+        <main>
+          <Switch>
+            <Route exact path="/" component={AboutMe} />
+            <Route path="/portfolio" component={Portfolio} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/resume" component={Resume} />
+          </Switch>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
