@@ -1,47 +1,38 @@
-header {
+:root {
+
+  --yellow-theme-background-color: #1d1d1d;
+  --yellow-theme-main-color: #ffdd40;
+  --yellow-theme-main-sub-text-color: #ffffff;
+  --yellow-theme-nav-background-color: #181818;
+}
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  background: var(--yellow-theme-background-color);
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+.navbar {
+  background-color: var(--yellow-theme-background-color);
+  height: 80px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 1rem;
-  background-color: #282c34;
-  color: white;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-}
-
-nav ul li {
-  margin: 0 1rem;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-nav ul li a.active {
-  border-bottom: 2px solid #61dafb;
-}
-
-section {
-  padding: 2rem;
-}
-
-footer {
-  padding: 1rem;
-  text-align: center;
-  background-color: #282c34;
-  color: white;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-}
-
-form span {
-  color: red;
-  font-size: 0.8rem;
-  display: block;
-  margin-top: 0.5rem;
+  font-size: 1.2rem;
 }
