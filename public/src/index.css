@@ -256,3 +256,29 @@ body {
   background: var(--yellow-theme-main-sub-text-color);
   color: var(--yellow-theme-nav-background-color);
 }
+
+
+/* About */
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.profile-image {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.about-container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-container p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
