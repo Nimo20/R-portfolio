@@ -13,17 +13,19 @@ const data = [
         to: "/about"
     },
     {
-        label: 'CONTACT',
-        to: "/contact"
-    },
-    {
         label: 'PROJECT',
         to: "/project"
     },
     {
-        label: 'PORTFOLIO',
-        to: "/portfolio"
+        label: 'CONTACT',
+        to: "/contact"
+    },
+    {
+        label: 'RESUME',
+        to: "/resume"
     }
+
+
 ];
 
 const Navigation = () => {
