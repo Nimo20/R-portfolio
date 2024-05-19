@@ -23,23 +23,40 @@ const Contact = () => {
     };
 
     return (
-        <section>
+        <section className="contact">
             <h2>Contact</h2>
             <form>
                 <label>
                     Name:
-                    <input type="text" name="name" value={formState.name} onChange={handleChange} onBlur={handleBlur} />
-                    {errors.name && <span>{errors.name}</span>}
+                    <input
+                        type="text"
+                        name="name"
+                        value={formState.name}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                    />
+                    {errors.name && <span className="error">{errors.name}</span>}
                 </label>
                 <label>
                     Email:
-                    <input type="email" name="email" value={formState.email} onChange={handleChange} onBlur={handleBlur} />
-                    {errors.email && <span>{errors.email}</span>}
+                    <input
+                        type="email"
+                        name="email"
+                        value={formState.email}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                    />
+                    {errors.email && <span className="error">{errors.email}</span>}
                 </label>
                 <label>
                     Message:
-                    <textarea name="message" value={formState.message} onChange={handleChange} onBlur={handleBlur}></textarea>
-                    {errors.message && <span>{errors.message}</span>}
+                    <textarea
+                        name="message"
+                        value={formState.message}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                    ></textarea>
+                    {errors.message && <span className="error">{errors.message}</span>}
                 </label>
                 <button type="submit">Submit</button>
             </form>

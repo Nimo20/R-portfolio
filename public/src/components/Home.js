@@ -1,18 +1,40 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
-const Header = () => {
+const Home = () => {
+    const navigate = useNavigate();
+
+    const handleNavigateToContactMePage = () => {
+        navigate('/contact');
+    };
     return (
         <header>
-            <h1>Developer's Name</h1>
             <nav>
-                <NavLink to="/" exact activeClassName="active">About Me</NavLink>
+                <NavLink to="/" exact activeClassName="active">Home</NavLink>
+                <NavLink to="/about" exact activeClassName="active">About</NavLink>
                 <NavLink to="/portfolio" activeClassName="active">Portfolio</NavLink>
                 <NavLink to="/contact" activeClassName="active">Contact</NavLink>
                 <NavLink to="/resume" activeClassName="active">Resume</NavLink>
             </nav>
-        </header>
+        </header>,
+
+        <section className="home">
+            <div>
+                <h1>
+                    Hello, I'm Nimo
+                    <br />
+                    Full stack developer
+                </h1>
+
+                <div className='contButon'>
+                    <button onClick={handleNavigateToContactMePage}>Hire me</button>
+                </div>
+
+            </div>
+
+
+        </section>
     );
 };
 
-export default Header;
+export default Home;

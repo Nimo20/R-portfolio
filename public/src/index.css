@@ -1,11 +1,9 @@
 :root {
-
   --yellow-theme-background-color: #1d1d1d;
   --yellow-theme-main-color: #ffdd40;
   --yellow-theme-main-sub-text-color: #ffffff;
   --yellow-theme-nav-background-color: #181818;
 }
-
 
 * {
   box-sizing: border-box;
@@ -21,6 +19,8 @@ html {
 
 body {
   background: var(--yellow-theme-background-color);
+  color: var(--yellow-theme-main-sub-text-color);
+  font-family: Arial, sans-serif;
   height: 100%;
 }
 
@@ -28,11 +28,231 @@ body {
   height: 100%;
 }
 
+/* Navigation */
 .navbar {
-  background-color: var(--yellow-theme-background-color);
+  background-color: var(--yellow-theme-nav-background-color);
   height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  color: var(--yellow-theme-main-color);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: var(--yellow-theme-main-color);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  transition: left 0.3s ease;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: var(--yellow-theme-main-color);
+  text-decoration: none;
+  font-size: 1.6rem;
+  transition: color 0.5s ease;
+}
+
+.nav-links a:hover {
+  color: var(--yellow-theme-main-sub-text-color);
+}
+
+.navicon {
+  display: none;
+  cursor: pointer;
+  color: var(--yellow-theme-main-color);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background-color: var(--yellow-theme-nav-background-color);
+    transition: left 0.3s ease;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    margin: 15px 0;
+  }
+
+  .nav-links a {
+    font-size: 2rem;
+  }
+
+  .navicon {
+    display: block;
+  }
+}
+
+/* home */
+
+.home {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: calc(100vh - 80px);
+  text-align: center;
+}
+
+.home h1 {
+  font-size: 8rem;
+  font-weight: 500;
+  color: var(--yellow-theme-main-color);
+  /* margin: 2px; */
+  line-height: 10rem;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typingEffectAnimation 2.5s steps(30, end);
+}
+
+@media screen and (max-width: 550px) {
+  .home h1 {
+    font-size: 3rem;
+    line-height: 5rem;
+  }
+}
+
+@media screen and (min-width: 550px) and (max-width: 768px) {
+  .home h1 {
+    font-size: 4rem;
+    line-height: 6rem;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 990px) {
+  .home h1 {
+    font-size: 6rem;
+    line-height: 7rem;
+  }
+}
+
+@keyframes typingEffectAnimation {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+
+/* Button */
+
+.contButon {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.contButon button {
+  background: transparent;
+  color: var(--yellow-theme-main-color);
+  border: 1.5px solid var(--yellow-theme-main-color);
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background: var(--yellow-theme-main-color);
+    color: var(--yellow-theme-background-color);
+  }
+}
+
+
+/* Contact */
+
+.contact {
+  background: var(--yellow-theme-background-color);
+  color: var(--yellow-theme-main-sub-text-color);
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact h2 {
+  color: var(--yellow-theme-main-color);
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+.contact form {
+  background: var(--yellow-theme-nav-background-color);
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact label {
+  margin-bottom: 15px;
+  color: var(--yellow-theme-main-sub-text-color);
+  font-size: 1.4rem;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid var(--yellow-theme-main-color);
+  border-radius: 4px;
+  background: var(--yellow-theme-background-color);
+  color: var(--yellow-theme-main-sub-text-color);
+  font-size: 1.4rem;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  outline: none;
+  border-color: var(--yellow-theme-main-color);
+}
+
+.contact .error {
+  color: red;
   font-size: 1.2rem;
+  margin-top: 5px;
+}
+
+.contact button {
+  background: var(--yellow-theme-main-color);
+  color: var(--yellow-theme-nav-background-color);
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+.contact button:hover {
+  background: var(--yellow-theme-main-sub-text-color);
+  color: var(--yellow-theme-nav-background-color);
 }

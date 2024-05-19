@@ -27,11 +27,11 @@ const data = [
 ];
 
 const Navigation = () => {
-    const [toggleIcon, setToggleIcon] = useState(false)
+    const [toggleIcon, setToggleIcon] = useState(false);
 
     const handleToggleIcon = () => {
-        setToggleIcon(!toggleIcon)
-    }
+        setToggleIcon(!toggleIcon);
+    };
 
     return (
         <div>
@@ -39,16 +39,16 @@ const Navigation = () => {
                 <Link to={'/'} className="logo">
                     <FaReact size={30} />
                 </Link>
-                <ul className="nav-links">
+                <ul className={`nav-links ${toggleIcon ? 'active' : ''}`}>
                     {data.map(item => (
                         <li key={item.to}>
-                            <Link to={item.to}>
+                            <Link to={item.to} onClick={handleToggleIcon}>
                                 {item.label}
                             </Link>
                         </li>
                     ))}
                 </ul>
-                <div className="navicon" onClick={handleToggleIcon}>
+                <div className="navicon" onClick={handleToggleIcon} aria-label="Toggle navigation">
                     {
                         toggleIcon ? <HiX size={30} /> : <FaBars size={30} />
                     }
@@ -59,7 +59,6 @@ const Navigation = () => {
 };
 
 export default Navigation;
-
 
 
 
