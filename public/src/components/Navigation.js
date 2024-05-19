@@ -13,9 +13,10 @@ const data = [
         to: "/about"
     },
     {
-        label: 'PROJECT',
-        to: "/project"
+        label: 'PORTFOLIO',
+        to: "/portfolio"
     },
+
     {
         label: 'CONTACT',
         to: "/contact"
