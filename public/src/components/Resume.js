@@ -1,27 +1,23 @@
 import React from 'react';
+import { skillsData } from './Skill';
 
 const Resume = () => {
     return (
         <div>
-            <h1>My Resume</h1>
-            <section>
-                <h2>Education</h2>
-                <p>Bachelor of Science in Computer Science - University XYZ</p>
-                <p>Graduation Year: 2020</p>
-            </section>
-            <section>
-                <h2>Experience</h2>
-                <p>Software Engineer - Company ABC</p>
-                <p>Duration: 2 years</p>
-            </section>
             <section>
                 <h2>Skills</h2>
-                <ul>
-                    <li>JavaScript</li>
-                    <li>React.js</li>
-                    <li>Node.js</li>
-                    <li>HTML/CSS</li>
-                </ul>
+                {skillsData.map((category, index) => (
+                    <div key={index}>
+                        <h3>{category.label}</h3>
+                        <ul>
+                            {category.data.map((skill, index) => (
+                                <li key={index}>
+                                    {skill.skillName} - {skill.percentage}%
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                ))}
             </section>
         </div>
     );
