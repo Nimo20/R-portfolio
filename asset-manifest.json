@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Nimo20.io/R-portfolio/static/css/main.12cd20a0.css",
-    "main.js": "/Nimo20.io/R-portfolio/static/js/main.6d5e962e.js",
-    "index.html": "/Nimo20.io/R-portfolio/index.html",
-    "main.12cd20a0.css.map": "/Nimo20.io/R-portfolio/static/css/main.12cd20a0.css.map",
-    "main.6d5e962e.js.map": "/Nimo20.io/R-portfolio/static/js/main.6d5e962e.js.map"
+    "main.css": "/R-portfolio/static/css/main.12cd20a0.css",
+    "main.js": "/R-portfolio/static/js/main.e07bb50d.js",
+    "index.html": "/R-portfolio/index.html",
+    "main.12cd20a0.css.map": "/R-portfolio/static/css/main.12cd20a0.css.map",
+    "main.e07bb50d.js.map": "/R-portfolio/static/js/main.e07bb50d.js.map"
   },
   "entrypoints": [
     "static/css/main.12cd20a0.css",
-    "static/js/main.6d5e962e.js"
+    "static/js/main.e07bb50d.js"
   ]
 }
