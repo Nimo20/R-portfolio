@@ -26,7 +26,7 @@
     "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://your-github-username.github.io/R-portfolio",
+  "homepage": "https://github.com/Nimo20/R-portfolio.git",
   "eslintConfig": {
     "extends": [
       "react-app",
