@@ -5,7 +5,7 @@ const Resume = () => {
     return (
         <div>
             <section>
-                <h2>Skills</h2>
+
                 <div className="skills-container">
                     {skillsData.map((category, index) => (
                         <div key={index} className="category">

@@ -4,7 +4,7 @@ const About = () => {
     return (
         <div className="about-container">
             <h1>About Me</h1>
-            <img src={process.env.PUBLIC_URL + '/image/Profile.JPG'} alt="Developer" className="profile-image" />
+            <img src={process.env.PUBLIC_URL + '/image/profile.jpeg'} alt="Developer" className="profile-image" />
             <p>
                 Am on a journey to become a skilled full-stack developer. With a background in problem solving and Yard coordinator at a food distribution center, currently am dedicated to mastering both the frontend and backend aspects of web development.
 

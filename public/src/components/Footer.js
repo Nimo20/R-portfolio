@@ -2,10 +2,11 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer>
-            <a href="http://github.com/user">GitHub</a>
-            <a href="http://linkedin.com/in/user">LinkedIn</a>
-
+        <footer className="footer">
+            <div className="footer-links">
+                <a href="https://github.com/account" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="http://linkedin.com/in/user" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
         </footer>
     );
 };
