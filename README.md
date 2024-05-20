@@ -20,8 +20,6 @@ The React Portfolio project is a dynamic and visually engaging web application d
 **Interactive Elements:** Incorporate modern UI elements such as animations, icons, and interactive components to enhance user engagement.
 
 
-**Deployment Ready:** 
-
 
 ## Technology Stack
 
@@ -39,3 +37,7 @@ The React Portfolio project is a dynamic and visually engaging web application d
 
 
 Contributions are welcome! If you have suggestions for improvements or new features, feel free to fork the repository and submit a pull request. Ensure that your code follows the project's coding standards and includes appropriate documentation.
+
+# Deployment Ready 
+
+live at  https://nimo20.github.io/R-portfolio/
