@@ -2,6 +2,8 @@
 
 The React Portfolio project is a dynamic and visually engaging web application designed to showcase your skills, projects, and professional experiences. Built with the latest version of React, this portfolio provides a clean and modern interface to present your work effectively to potential employers, clients, or collaborators.
 
+![image](public/public/image/port.png)
+
 
 ## Features
 
