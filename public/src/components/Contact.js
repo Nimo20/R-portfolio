@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
     const [formState, setFormState] = useState({ name: '', email: '', message: '' });
     const [errors, setErrors] = useState({});
+    const [successMessage, setSuccessMessage] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -22,10 +25,39 @@ const Contact = () => {
         setErrors({ ...errors, [name]: error });
     };
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        // Validate form fields
+        const newErrors = {};
+        Object.keys(formState).forEach((key) => {
+            if (!formState[key]) {
+                newErrors[key] = 'This field is required';
+            }
+        });
+
+        setErrors(newErrors);
+
+        if (Object.keys(newErrors).length === 0) {
+            // Send email using EmailJS
+            emailjs.send('service_3cem42q', 'template_lh9z29c', formState, 'vHFeMPAuFjAIJEvRH')
+                .then((response) => {
+                    console.log('Email sent successfully:', response);
+                    setSuccessMessage('Your message has been sent successfully!');
+                    setFormState({ name: '', email: '', message: '' }); // Clear form fields
+                    setErrors({}); // Clear errors
+                })
+                .catch((error) => {
+                    console.error('Error sending email:', error);
+                    setErrorMessage('An error occurred while sending your message. Please try again.');
+                });
+        }
+    };
+
     return (
         <section className="contact">
             <h2>Contact</h2>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <label>
                     Name:
                     <input
@@ -59,9 +91,16 @@ const Contact = () => {
                     {errors.message && <span className="error">{errors.message}</span>}
                 </label>
                 <button type="submit">Submit</button>
+                {successMessage && <p className="success">{successMessage}</p>}
+                {errorMessage && <p className="error">{errorMessage}</p>}
             </form>
         </section>
     );
 };
 
 export default Contact;
+
+
+
+
+

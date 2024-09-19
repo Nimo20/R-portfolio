@@ -4,35 +4,34 @@ export const skillsData = [
         data: [
             {
                 skillName: "HTML",
-                parcentage: "100"
+                percentage: 100
             },
             {
                 skillName: "CSS",
-                parcentage: "90"
+                percentage: 90
             },
             {
                 skillName: "JAVASCRIPT",
-                parcentage: "80"
+                percentage: 80
             },
             {
                 skillName: "REACT",
-                parcentage: "60"
+                percentage: 60
             }
         ]
     },
 
     {
-        label: 'DATABESES',
+        label: 'DATABASES',
         data: [
             {
                 skillName: "MYSQL",
-                parcentage: "100"
+                percentage: 100
             },
             {
                 skillName: "MONGODB",
-                parcentage: "90"
+                percentage: 90
             }
         ]
     }
-
-]
+];

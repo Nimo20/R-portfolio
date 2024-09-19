@@ -49,7 +49,12 @@ body {
 .nav-links {
   display: flex;
   list-style: none;
-  transition: left 0.3s ease;
+  margin-left: auto;
+  /* Pushes the nav-links to the right */
+  transition: transform 0.3s ease;
+  /* Transition for sliding */
+  transform: translateX(0);
+  /* Default state */
 }
 
 .nav-links li {
@@ -73,20 +78,24 @@ body {
   color: var(--yellow-theme-main-color);
 }
 
+/* Mobile View */
 @media (max-width: 768px) {
   .nav-links {
-    display: none;
     flex-direction: column;
-    width: 100%;
     position: absolute;
     top: 80px;
-    left: 0;
+    right: 0;
+    /* Align on the right */
     background-color: var(--yellow-theme-nav-background-color);
-    transition: left 0.3s ease;
+    transform: translateX(100%);
+    /* Hide off-screen to the right */
+    width: 100%;
+    /* Full-width menu on mobile */
   }
 
   .nav-links.show {
-    display: flex;
+    transform: translateX(0);
+    /* Slide in from the right */
   }
 
   .nav-links li {
@@ -100,6 +109,7 @@ body {
 
   .navicon {
     display: block;
+    /* Show the toggle icon */
   }
 }
 
@@ -127,14 +137,14 @@ body {
 
 @media screen and (max-width: 550px) {
   .home h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     line-height: 5rem;
   }
 }
 
 @media screen and (min-width: 550px) and (max-width: 768px) {
   .home h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     line-height: 6rem;
   }
 }
@@ -341,7 +351,6 @@ body {
   margin-left: 20px;
   margin-right: 20px;
   padding-top: 20px;
-
 }
 
 .category {
@@ -357,14 +366,12 @@ body {
 .category ul {
   padding-left: 0;
   list-style: none;
-
 }
 
 .category li {
   margin-bottom: 30px;
   font-size: 2rem;
   padding-bottom: 10px;
-
 }
 
 .skill-container {
@@ -373,14 +380,12 @@ body {
 }
 
 .percentage-container {
-  width: 100%;
   background-color: var(--yellow-theme-main-color);
   border-radius: 5px;
   overflow: hidden;
   position: relative;
   height: 40px;
   margin-top: 5px;
-
 }
 
 .percentage {
@@ -390,21 +395,19 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
-
   position: absolute;
   top: 0;
   left: 0;
   border-radius: 5px;
-
+  transition: width 1s ease-in-out;
 }
-
 
 /* footer */
 
 .footer {
   background-color: var(--yellow-theme-background-color);
   border-top: 1px solid var(--yellow-theme-main-sub-text-color);
-  padding: 20px 0;
+  padding: 10px;
   text-align: center;
   position: fixed;
   width: 100%;
